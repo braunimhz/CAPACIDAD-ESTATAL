@@ -1,0 +1,10 @@
+	Will do irregs (frac)	Demean Will do irregs (frac)	Above Av Will do irregs (=1)	
+Any Treatment	    0.021	    0.101	    0.007	
+Information Ad	    0.004	    0.021	    0.034	
+Call-to-Action Ad	    0.363	    0.960	    0.099	
+Info+Call-to-Action Ad	    0.141	    0.120	    0.007	
+No Letter - Any Ad	    0.021	    0.156	    0.029	
+Letter - Any Ad	    0.072	    0.150	    0.012	
+No Letter - Any Ad	    0.021	    0.156	    0.029	
+P Knowledge Letter - Any Ad	    0.461	    0.873	    0.289	
+Full Knowledge Letter - Any Ad	    0.026	    0.026	    0.001	

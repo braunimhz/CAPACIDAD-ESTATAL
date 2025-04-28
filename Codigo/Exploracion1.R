@@ -21,3 +21,4 @@ correlaciones <- cor(datos_m[, c("z_likelihood_misdeed_1",
                                "z_likelihood_misdeed_5",
                                "z_likelihood_misdeed_6")],
                      use = "complete.obs")  
+

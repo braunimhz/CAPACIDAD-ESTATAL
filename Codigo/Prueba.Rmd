@@ -21,33 +21,18 @@ datos_m <- read_dta("C:/Users/nikko/OneDrive/Documents/Semillero R/CAPACIDAD-EST
 
 # Introduccion
 
-aca se pondra el analisis de la matriz de correlacion de capacidad estatal
+En general, las correlaciones entre estas variables son bastante bajas, lo cual sugiere que no tienden a ocurrir juntas con frecuencia o de manera sistemática. La correlación más alta observada es de 0.20 entre media_irreg_compra y media_irreg_intervencion, lo que indica una débil asociación positiva. Las demás correlaciones rondan valores cercanos a cero o incluso negativos, lo que refuerza la idea de que estas irregularidades pueden manifestarse de manera independiente unas de otras. 
 
 ```{r}
 #Tabla de correlaciones entre las variables medidas para compra de votos
-correlaciones <- cor(datos_m[, c("z_likelihood_misdeed_1", 
-                               "z_likelihood_misdeed_2",
-                               "z_likelihood_misdeed_3",
-                               "z_likelihood_misdeed_4",
-                               "z_likelihood_misdeed_5",
-                               "z_likelihood_misdeed_6")],
+correlaciones_2 <- cor(datos_m[, c("media_irreg_intimidacion", 
+                                 "media_irreg_compra",
+                                 "media_irreg_trashumancia",
+                                 "media_irreg_fraud",
+                                 "media_irreg_intervencion")],
                      use = "complete.obs")  
 
-#Tabla de correlaciones entre las variables medidas para compra de votos
-nombres <- c("intimidación de votantes", 
-                            "compra de votos", 
-                            "fraude de registro",
-                            "fraude electoral", 
-                            "campaña de servidores públicos", 
-                            "publicidad ilícita")
-
-
-# Cambiar nombres de columnas Y filas
-colnames(correlaciones) <- nombres
-rownames(correlaciones) <- nombres
-
-# Visualizar la matriz de correlaciones
-corrplot(correlaciones, method = "color", type = "upper", 
+corrplot(correlaciones_2, method = "color", type = "upper", 
          addCoef.col = "black", 
          tl.col = "black",      
          tl.srt = 45)            

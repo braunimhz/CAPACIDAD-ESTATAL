@@ -9,9 +9,9 @@ date: "2025-04-28"
 knitr::opts_chunk$set(echo = TRUE)
 
 #instalacion de paquetes necesarios
-
 library(corrplot)
 library(haven)
+library(dplyr)
 
 #leer datos .dta en R
 datos_c <- read_dta("C:/Users/nikko/OneDrive/Documents/Semillero R/CAPACIDAD-ESTATAL/Paquete Rep. Nat/Final/main_data_candidate_level.dta")
@@ -19,7 +19,7 @@ datos_m <- read_dta("C:/Users/nikko/OneDrive/Documents/Semillero R/CAPACIDAD-EST
 
 ```
 
-# introduccion 
+# Analisis matriz de correlacion medidas para la compra de votos
 
 aca se pondra el analisis de la matriz de correlacion de capacidad estatal
 

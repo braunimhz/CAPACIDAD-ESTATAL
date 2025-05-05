@@ -19,7 +19,7 @@ datos_m <- read_dta("C:/Users/nikko/OneDrive/Documents/Semillero R/CAPACIDAD-EST
 
 ```
 
-# Analisis matriz de correlacion medidas para la compra de votos
+# Introduccion
 
 aca se pondra el analisis de la matriz de correlacion de capacidad estatal
 

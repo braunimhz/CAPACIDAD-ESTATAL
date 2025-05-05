@@ -5,6 +5,8 @@ setwd("C:/Users/nikko/OneDrive/Documents/Semillero R/CAPACIDAD-ESTATAL/Codigo")
 install.packages("haven")
 install.packages("corrplot")
 install.packages("dplyr")
+install.packages("skimr")
+library(skimr)
 library(corrplot)
 library(haven)
 library(dplyr)
@@ -45,3 +47,29 @@ corrplot(correlaciones, method = "color", type = "upper",
          tl.col = "black",      
          tl.srt = 45)            
 
+skim(datos_m[, c("z_likelihood_misdeed_1", 
+                 "z_likelihood_misdeed_2",
+                 "z_likelihood_misdeed_3",
+                 "z_likelihood_misdeed_4",
+                 "z_likelihood_misdeed_5",
+                 "z_likelihood_misdeed_6")])
+
+#intimidacion de votantes: 639
+#compra de votos: 642
+# fraude de registro: 639
+#fraude electoral: 639
+#campaña de servidores publicos: 638
+#publicidad ilicita: 634
+
+#variables irregularidades
+correlaciones_2 <- cor(datos_m[, c("media_irreg_intimidacion", 
+                                 "media_irreg_compra",
+                                 "media_irreg_trashumancia",
+                                 "media_irreg_fraud",
+                                 "media_irreg_intervencion")],
+                     use = "complete.obs")  
+
+corrplot(correlaciones_2, method = "color", type = "upper", 
+         addCoef.col = "black", 
+         tl.col = "black",      
+         tl.srt = 45)            

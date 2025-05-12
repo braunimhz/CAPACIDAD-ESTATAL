@@ -8,3 +8,13 @@ datos_m <- read_dta("C:/Users/nikko/OneDrive/Documents/Semillero R/CAPACIDAD-EST
 
 
 datos_unidos <- full_join(panel, datos_m, by = c("codmpio" = "ID"))
+
+
+
+datos_unidos_2 <- datos_unidos %>% 
+  filter(ano == 2019)
+
+
+
+
+

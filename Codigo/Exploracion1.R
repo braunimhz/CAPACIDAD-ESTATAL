@@ -15,6 +15,8 @@ library(dplyr)
 datos_c <- read_dta("C:/Users/nikko/OneDrive/Documents/Semillero R/CAPACIDAD-ESTATAL/Paquete Rep. Nat/Final/main_data_candidate_level.dta")
 datos_m <- read_dta("C:/Users/nikko/OneDrive/Documents/Semillero R/CAPACIDAD-ESTATAL/Paquete Rep. Nat/Final/main_data_municipal_level.dta")
 
+
+
 #Estadisticos descriptivos de las variables medidas para compra de votos
 summary(datos_m %>% 
           select(starts_with("z_likelihood_misdeed_")))
@@ -72,4 +74,8 @@ correlaciones_2 <- cor(datos_m[, c("media_irreg_intimidacion",
 corrplot(correlaciones_2, method = "color", type = "upper", 
          addCoef.col = "black", 
          tl.col = "black",      
-         tl.srt = 45)            
+         tl.srt = 45)    
+
+
+
+
